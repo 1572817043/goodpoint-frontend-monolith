@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* 自定义主题色 */
+@theme {
+  --color-klein-blue: #002FA7;
+  --color-apple-gray-50: #FBFBFD;
+  --color-apple-gray-100: #F5F5F7;
+  --color-apple-gray-200: #E8E8ED;
+  --color-apple-gray-300: #D2D2D7;
+  --color-apple-gray-400: #86868B;
+  --color-apple-gray-500: #6E6E73;
+  --color-apple-gray-600: #424245;
+  --color-apple-gray-700: #333336;
+  --color-apple-gray-800: #1D1D1F;
+  --color-apple-gray-900: #111111;
+}
+
+/* 全局基础样式 */
+@layer base {
+  /* 使用苹果系统字体 */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+      'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FBFBFD;
+    color: #1D1D1F;
+  }
+
+  /* 链接默认样式 */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* 滚动条美化 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D2D2D7;
+    border-radius: 3px;
+  }
+}
+
+/* 全局过渡动画 */
+@layer utilities {
+  .transition-default {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .transition-fast {
+    transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
